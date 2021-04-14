@@ -11,6 +11,7 @@ const products = require('./models/products');
 
 
 //Allow all cross-origins
+
 app.use(cors());
 
 //Allow use of Json parser
