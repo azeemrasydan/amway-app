@@ -26,6 +26,7 @@ app.get('/', function(req, res) {
 router.post('/checkout-items', checkoutItems);
 router.get('/products', products);
 
+
 //Serve static public files API
 app.use(express.static('public'))
 app.use('/api/', router);
