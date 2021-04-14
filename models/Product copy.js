@@ -23,25 +23,10 @@ module.exports = class Product {
 
         var totalItemPrice;
 
-
-
-
-        // Find out promotion list for the two
-        var promotionIdForAudience = audienceLevelPromotionPackages.find(x => x.id === audienceLevelId).promotionPackageId;
-
-        if (this.isPromotionalProduct) {
-            var promotionIdForProduct = this.productPromotionPackage.promotionPackageId;
-            var minItemForPromotionProduct = promotionPackages.find(x => x.id === promotionIdForProduct).minItem;
-        } else {
-
-            var minItemForPromotionProduct = promotionPackages.find(x => x.id === promotionIdForAudience).minItem;
-        }
-
-
         // Assign promotion according to promotional status of the product
-        var itemPromotionId = (this.isPromotionalProduct && qty >= minItemForPromotionProduct) ? // If it is promotional product
-            (promotionIdForProduct) //true - product promotion package applies
-            : (promotionIdForAudience) //false - audience promotion package applies
+        var itemPromotionId = (this.isPromotionalProduct) ? // If it is promotional product
+            (productPromotionPackages.find(x => x.productId === this.productId)).promotionPackageId //true - product promotion package applies
+            : (audienceLevelPromotionPackages.find(x => x.audienceLevelId === audienceLevelId)).promotionPackageId //false - audience promotion package applies
 
         var itemPromotionPackage = promotionPackages.find(x => x.id === itemPromotionId);
 

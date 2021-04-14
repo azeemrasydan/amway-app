@@ -68,6 +68,13 @@ const products = [
         price: 30,
         img : "dummy-pdt-b.jpg",
         desc : "Had judgment out property the supplied. ",
+    },
+    {
+        id: 5,
+        name: "Laptop",
+        price: 3000,
+        img : "dummy-pdt-b.jpg",
+        desc : "Best product ever offered ",
     }
 ];
 
