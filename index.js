@@ -1,15 +1,35 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-var path = require('path');
+const cors = require('cors');
+const path = require('path');
+const router = require('express').Router();
+const bodyParser = require("body-parser");
 
-//Serve static public files API
-app.use('/static', express.static(path.join(__dirname, 'public')))
+const checkoutItems = require('./models/checkout-items');
+
+
+//Allow all cross-origins
+app.use(cors());
+
+//Allow use of Json parser
+app.use(bodyParser.json({
+  limit: '50mb'
+}));
 
 //Default index file
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/static/public/index.html'));
+    res.sendFile(path.join(__dirname + '/public/index.html'));
 });
+
+router.post('/checkout-items', checkoutItems);
+
+//Serve static public files API
+app.use(express.static('public'))
+app.use('/api/', router);
+
+//Include master API routes
+// require('./routes')(app);
 
 //Listen on port specified above
 app.listen(port, () => {
