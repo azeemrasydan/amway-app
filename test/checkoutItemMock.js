@@ -7,7 +7,8 @@ const items = [
     { "itemId": 3, "qty": 6, "promotionPackage": undefined, "isPromotionalProduct": false, "totalPrice": 1140},
     { "itemId": 4, "qty": 10, "promotionPackage": undefined, "isPromotionalProduct": false, "totalPrice": 285}
 
-]
+],
+"overall price": 12310.95
 },
 
 {"AudienceLevelId": 2,
@@ -18,8 +19,10 @@ const items = [
     { "itemId": 3, "qty": 6, "promotionPackage": undefined, "isPromotionalProduct": false, "totalPrice": 960},
     { "itemId": 4, "qty": 10, "promotionPackage": undefined, "isPromotionalProduct": false, "totalPrice": 240}
 
-]
+],
+"overall price": 12085.95
 }
+
 ]
 
 

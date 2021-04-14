@@ -62,7 +62,7 @@ module.exports = class Product {
 
         }
 
-        return totalItemPrice.toFixed(2);
+        return parseFloat(totalItemPrice.toFixed(2));
     }
 
 

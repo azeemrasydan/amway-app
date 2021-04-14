@@ -43,23 +43,31 @@ const products = [
     {
         id: 1,
         name: "Kone",
-        price: 3488.99
+        price: 3488.99,
+        img : "dummy-pdt-b.jpg",
+        desc : "Greatest properly off ham exercise all.",
     },
 
     {
         id: 2,
         name: "Ironhide Cartridge",
-        price: 529.99
+        price: 529.99,
+        img : "dummy-pdt-b.jpg",
+        desc : "Unsatiable its possession nor off.",
     },
     {
         id: 3,
         name: "Steam Iron",
-        price: 200
+        price: 200,
+        img : "dummy-pdt-b.jpg",
+        desc : "All difficulty unreserved the solicitude.",
     },
     {
         id: 4,
         name: "Blood Pressure Instrument",
-        price: 30
+        price: 30,
+        img : "dummy-pdt-b.jpg",
+        desc : "Had judgment out property the supplied. ",
     }
 ];
 

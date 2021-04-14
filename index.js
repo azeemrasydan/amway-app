@@ -6,7 +6,8 @@ const path = require('path');
 const router = require('express').Router();
 const bodyParser = require("body-parser");
 
-const checkoutItems = require('./models/checkout-items');
+const checkoutItems = require('./models/checkoutItems');
+const products = require('./models/products');
 
 
 //Allow all cross-origins
@@ -23,6 +24,7 @@ app.get('/', function(req, res) {
 });
 
 router.post('/checkout-items', checkoutItems);
+router.get('/products', products);
 
 //Serve static public files API
 app.use(express.static('public'))

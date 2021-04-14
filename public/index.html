@@ -1,20 +1,20 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>document.getElementsByTagName("html")[0].className += " js";</script>
-  <title>Add to Cart Interaction | CodyHouse</title>
-</head>
-<body>
-<h1>Add to Cart</h1>
-<ul id = 'productList'>
-	<li><a href="#">Item 1</a></li>
-	<li><a href="#">Item 2</a></li>
-	<li><a href="#">Item 3</a></li>
-</ul>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple JS Cart</title>
 
+    <!-- (A) CSS + JS -->
+    <link rel="stylesheet" href="cart.css">
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+  </head>
+  <body>
+    <div id="cart-wrap">
+      <!-- (B) PRODUCTS LIST -->
+      <div id="cart-products"></div>
 
-<script src="/assets/js/engine.js"></script> 
-</body>
+      <!-- (C) CURRENT CART -->
+      <div id="cart-items"></div>
+    </div>
+  </body>
 </html>
